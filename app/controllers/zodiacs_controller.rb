@@ -5,6 +5,18 @@ class ZodiacsController < ApplicationController
     @zodiac = params["the_sign"]
 
     @z = Zodiac.find_by( { :sign => params["the_sign"]})
+
+
+  end
+
+  def creature
+    # params = {"the_creature"}
+    @zodiac = params["the_creature"]
+
+    @z = Zodiac.find_by ( { :creature => params["the_creature"]})
+
+    render 'sign'
+
   end
 
   def ram
